@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(145deg, #fff0f5 0%, #ffe4ec 100%);
+    font-family: 'Inter', sans-serif;
+    color: #3e2a2f;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, #ff9eb5, #ff6f91);
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 15px 30px rgba(255, 111, 145, 0.4);
+}
+
+.avatar i {
+    font-size: 3.5rem;
+    color: white;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    background: linear-gradient(120deg, #c92c4a, #ff6b8b);
+    -webkit-background-clip: text; LAYNE FERRAIZ
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #b13e5a;
+    background: rgba(255, 255, 255, 0.6);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.description {
+    max-width: 600px;
+    margin: 1.5rem auto 0;
+    color: #5d3a44;
+}
+
+/* Cards */
+.packages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    border-radius: 2rem;
+    padding: 2.5rem 2rem;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(201, 44, 74, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 182, 193, 0.3);
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 50px rgba(255, 111, 145, 0.2);
+}
+
+.card.featured {
+    border: 2px solid #ff6b8b;
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff6b8b;
+    color: white;
+    padding: 4px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: #ff3b6f;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ff3b6f;
+    margin: 1rem 0;
+}
+
+.price span {
+    font-size: 0.9rem;
+    color: #8e5b68;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.features li {
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features i {
+    color: #ff6b8b;
+}
+
+.btn {
+    background: linear-gradient(95deg, #ff6584, #ff3a62);
+    color: white;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    border-radius: 50px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(255, 58, 98, 0.3);
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* Toast */
+.toast-message {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2e1a22;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.toast-message.show {
+    opacity: 1;
+}
+
+.trust-bar {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    color: #b13e5a;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 0.8rem;
+    color: #b28292;
+}
+
+@media (max-width: 768px) {
+    .card.featured { transform: scale(1); }
+    h1 { font-size: 2.5rem; }
+}
